@@ -5,21 +5,21 @@
 class Fc < Formula
   desc "CLI for file.cheap - upload, transform, and deliver images"
   homepage "https://file.cheap"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v0.1.0/fc_0.1.0_darwin_amd64.tar.gz"
-      sha256 "1782081fc2dbdbc902724ad51c4a571ae9d8fcc7172dc776165814108a24e3f3"
+      url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v0.2.0/fc_0.2.0_darwin_amd64.tar.gz"
+      sha256 "b849daeab870815519ffd3e06adca21f6cbc18e6557fd139bf2fd07e05bd722e"
 
       def install
         bin.install "fc"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v0.1.0/fc_0.1.0_darwin_arm64.tar.gz"
-      sha256 "c0fb37318c652c4bb46c9a32c6ccf338f50a4c34e862c616498470d433d7400c"
+      url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v0.2.0/fc_0.2.0_darwin_arm64.tar.gz"
+      sha256 "cc69fc862ca740ecd997808b13809cebbf7c3808bbd010c27d168e62abbadbb3"
 
       def install
         bin.install "fc"
@@ -29,15 +29,15 @@ class Fc < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v0.1.0/fc_0.1.0_linux_amd64.tar.gz"
-      sha256 "0327ba29f24d7d960bdfe57abc3afe879d4e7e46059b3aab65205dffe5e442f1"
+      url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v0.2.0/fc_0.2.0_linux_amd64.tar.gz"
+      sha256 "75183cb30e1b7bbb90216f145d2613a4941cd93082319f96694201ea4396085d"
       def install
         bin.install "fc"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v0.1.0/fc_0.1.0_linux_arm64.tar.gz"
-      sha256 "afbc59db047cdcc94234f735b547fa8ca72ef71476af113f50f36d4a819a4014"
+      url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v0.2.0/fc_0.2.0_linux_arm64.tar.gz"
+      sha256 "10f5f8493df2f74ada62cd4842c893147426c347fc6b1132f088c55179f48d55"
       def install
         bin.install "fc"
       end
