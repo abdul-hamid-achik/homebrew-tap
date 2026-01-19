@@ -5,21 +5,21 @@
 class Gpeek < Formula
   desc "TUI for code review, git visualization, and repository management"
   homepage "https://github.com/abdul-hamid-achik/gpeek"
-  version "0.3.0"
+  version "0.3.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abdul-hamid-achik/gpeek/releases/download/v0.3.0/gpeek_0.3.0_darwin_amd64.tar.gz"
-      sha256 "de88a57a4ff8d6fecc74d6ed0b1f2262bd4b97be64cfeeec4ac8fdf87d46989f"
+      url "https://github.com/abdul-hamid-achik/gpeek/releases/download/v0.3.1/gpeek_0.3.1_darwin_amd64.tar.gz"
+      sha256 "7eba0eaf1182de1f973bfa4238271e59d5df8b0392a4971d25e220968d5bb706"
 
       def install
         bin.install "gpeek"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abdul-hamid-achik/gpeek/releases/download/v0.3.0/gpeek_0.3.0_darwin_arm64.tar.gz"
-      sha256 "97385bb17c09094a8eabe7cb1867d7b6a0fc3b0a5b99065dcdbcafa5a4e82521"
+      url "https://github.com/abdul-hamid-achik/gpeek/releases/download/v0.3.1/gpeek_0.3.1_darwin_arm64.tar.gz"
+      sha256 "67048c7d44f7f3d8d722ac39e248b1e71bf28ea4e24a2510c12679f601d7a852"
 
       def install
         bin.install "gpeek"
@@ -29,15 +29,15 @@ class Gpeek < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/gpeek/releases/download/v0.3.0/gpeek_0.3.0_linux_amd64.tar.gz"
-      sha256 "c2a461bf92bb769331de90ec971a385ee3e7e4e2b9f327f96668210bda8bf708"
+      url "https://github.com/abdul-hamid-achik/gpeek/releases/download/v0.3.1/gpeek_0.3.1_linux_amd64.tar.gz"
+      sha256 "ca84291e606c7d20cc799da98afa9befe23353225d6ad40770028161e43dec03"
       def install
         bin.install "gpeek"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/gpeek/releases/download/v0.3.0/gpeek_0.3.0_linux_arm64.tar.gz"
-      sha256 "d207ebe7ba91f5954b0bde36399b9171be0af03cca93f72420b3e52906ab5641"
+      url "https://github.com/abdul-hamid-achik/gpeek/releases/download/v0.3.1/gpeek_0.3.1_linux_arm64.tar.gz"
+      sha256 "ce433a38425a5898495d3176820b7415c6cb0b237f07dbc6a5afcc1587ab37fe"
       def install
         bin.install "gpeek"
       end
