@@ -5,22 +5,22 @@ class Vecgrep < Formula
   desc "Local-first semantic code search powered by embeddings"
   homepage "https://github.com/abdul-hamid-achik/vecgrep"
   license "MIT"
-  version "0.2.6"
+  version "0.2.7"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/abdul-hamid-achik/vecgrep/releases/download/v0.2.6/vecgrep_0.2.6_darwin_arm64.tar.gz"
-      sha256 "79f23f23118cc3aa596bfbf6e19752d29a1623146fde84a066ba00104a99d927"
+      url "https://github.com/abdul-hamid-achik/vecgrep/releases/download/v0.2.7/vecgrep_0.2.7_darwin_arm64.tar.gz"
+      sha256 "b1e0588b7744b1c01026068371f96887ebe16360573574b39b035a734938f1a5"
     else
-      url "https://github.com/abdul-hamid-achik/vecgrep/releases/download/v0.2.6/vecgrep_0.2.6_darwin_amd64.tar.gz"
-      sha256 "cbb952074004a62c53048da1687e6c1ae6129406a731e6e43584e92509dd540f"
+      url "https://github.com/abdul-hamid-achik/vecgrep/releases/download/v0.2.7/vecgrep_0.2.7_darwin_amd64.tar.gz"
+      sha256 "21c36e42f5f81f9c073546a40f8a427b02d6c39afe728a1b64617bebd1afa568"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/vecgrep/releases/download/v0.2.6/vecgrep_0.2.6_linux_amd64.tar.gz"
-      sha256 "463d8254c43ae8f04e470eaad977627cd34776a7681c0f4ee0148c3cf5fb3b94"
+      url "https://github.com/abdul-hamid-achik/vecgrep/releases/download/v0.2.7/vecgrep_0.2.7_linux_amd64.tar.gz"
+      sha256 "03697eb4bece236fca5adb8df1d740bec5fa34496f46a767ba2b7bf30092787a"
     end
   end
 
