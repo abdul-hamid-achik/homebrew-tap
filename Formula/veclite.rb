@@ -5,21 +5,21 @@
 class Veclite < Formula
   desc "SQLite for vectors. Embed anywhere, no servers, one file."
   homepage "https://github.com/abdul-hamid-achik/veclite"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abdul-hamid-achik/veclite/releases/download/v0.2.0/veclite_0.2.0_darwin_amd64.tar.gz"
-      sha256 "8d284c826d7cc8e9d44f967a9ebd6225a3a1bc879d350b269a1c0edfafefcf7c"
+      url "https://github.com/abdul-hamid-achik/veclite/releases/download/v0.2.1/veclite_0.2.1_darwin_amd64.tar.gz"
+      sha256 "260a352f299d5b56290ebdf9bd547ab6ddaae3fcaa2f0398a036db4626942584"
 
       def install
         bin.install "veclite"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abdul-hamid-achik/veclite/releases/download/v0.2.0/veclite_0.2.0_darwin_arm64.tar.gz"
-      sha256 "800e4f6c2a5c8fe29b48d19df77849775445ac9571d2a0889dc0d9279a74dd22"
+      url "https://github.com/abdul-hamid-achik/veclite/releases/download/v0.2.1/veclite_0.2.1_darwin_arm64.tar.gz"
+      sha256 "489c3774d4940c355537cd66b1741fcc77afe1acd965d7e4688e24e08defd876"
 
       def install
         bin.install "veclite"
@@ -29,15 +29,15 @@ class Veclite < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/veclite/releases/download/v0.2.0/veclite_0.2.0_linux_amd64.tar.gz"
-      sha256 "3b57bfb8dc4ae44a6ce9d501716f7962007301a9f92ed117ca6fdb74f52f5738"
+      url "https://github.com/abdul-hamid-achik/veclite/releases/download/v0.2.1/veclite_0.2.1_linux_amd64.tar.gz"
+      sha256 "34bf82f06c72935779f679681152a06f23481c3c0b2998b5b823dfe6c25434d6"
       def install
         bin.install "veclite"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/veclite/releases/download/v0.2.0/veclite_0.2.0_linux_arm64.tar.gz"
-      sha256 "de86044afe35072a783534d0cdcdf1cb0b68ed3c7cb99c9bcdbe623141e85dc0"
+      url "https://github.com/abdul-hamid-achik/veclite/releases/download/v0.2.1/veclite_0.2.1_linux_arm64.tar.gz"
+      sha256 "91cd74e3b10fbac42cb4fc58824aeab4967bcd78262b35f7c0e36815fb6ffe00"
       def install
         bin.install "veclite"
       end
