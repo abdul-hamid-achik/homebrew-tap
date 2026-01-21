@@ -10,17 +10,17 @@ class Vecgrep < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/abdul-hamid-achik/vecgrep/releases/download/v0.3.1/vecgrep_0.3.1_darwin_arm64.tar.gz"
-      sha256 "ffb2b588662c023723ab7d58b17c2a89ea877d6731d24f682f37e938a8899063"
+      sha256 "bbada63c837d8007d869749e832153efbf2774791a8817fd7505afad0ba366f8"
     else
       url "https://github.com/abdul-hamid-achik/vecgrep/releases/download/v0.3.1/vecgrep_0.3.1_darwin_amd64.tar.gz"
-      sha256 "da019a5d7314c2db78878bbe455324e93c0ec9f0731a08f89ff967d8c3ae2eb0"
+      sha256 "deb9e476e036d94c83f76dbbc82e75459eee43cbf9d78a2fc439e3fbb2499bde"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/abdul-hamid-achik/vecgrep/releases/download/v0.3.1/vecgrep_0.3.1_linux_amd64.tar.gz"
-      sha256 "7515b4eb80faebf0bd4f3afcba48b8c3eb8d480d1195853daf5430ae929286d0"
+      sha256 "f7660df78c838b3bb4d75c815bc30901620dc40e5653624d1be319cb241bfbea"
     end
   end
 
