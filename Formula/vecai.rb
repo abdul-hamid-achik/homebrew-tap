@@ -5,21 +5,21 @@
 class Vecai < Formula
   desc "AI-powered codebase assistant with semantic search and Claude intelligence"
   homepage "https://github.com/abdul-hamid-achik/vecai"
-  version "0.2.1"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abdul-hamid-achik/vecai/releases/download/v0.2.1/vecai_0.2.1_darwin_amd64.tar.gz"
-      sha256 "2f7b69550d0c1b53798561335ec6bc35e168b837a7a82662a1b58b0461767d0a"
+      url "https://github.com/abdul-hamid-achik/vecai/releases/download/v0.3.0/vecai_0.3.0_darwin_amd64.tar.gz"
+      sha256 "bdbc1c8a94f51be6cf5c9ff18a673e57446b4baf0ef4d6288b7e633126f8aeae"
 
       def install
         bin.install "vecai"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abdul-hamid-achik/vecai/releases/download/v0.2.1/vecai_0.2.1_darwin_arm64.tar.gz"
-      sha256 "27eea6b6bf17d13544d666de00ca85d5255c27bc2f987d7a5e25196599540388"
+      url "https://github.com/abdul-hamid-achik/vecai/releases/download/v0.3.0/vecai_0.3.0_darwin_arm64.tar.gz"
+      sha256 "5fde4cf15b1bc8d429a389e2deee8e84141f80e22cbe2066e1b714bd8702ab44"
 
       def install
         bin.install "vecai"
@@ -29,15 +29,15 @@ class Vecai < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/vecai/releases/download/v0.2.1/vecai_0.2.1_linux_amd64.tar.gz"
-      sha256 "702a382afc6f8e317dcaada5f759000dc2d6be4d958ab793727e4685d93bc73d"
+      url "https://github.com/abdul-hamid-achik/vecai/releases/download/v0.3.0/vecai_0.3.0_linux_amd64.tar.gz"
+      sha256 "4efd96ce27443baf34609df399e27a89abee4c6cb2d834639980b8d2b050ae4c"
       def install
         bin.install "vecai"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/vecai/releases/download/v0.2.1/vecai_0.2.1_linux_arm64.tar.gz"
-      sha256 "bffb9f02fab13e519640b3f7afac531802aa9e97454243379e357e019382960e"
+      url "https://github.com/abdul-hamid-achik/vecai/releases/download/v0.3.0/vecai_0.3.0_linux_arm64.tar.gz"
+      sha256 "90ffff015caa3b3fa527add187e2a4a403f0b969afa2e1e0bec27d684f7b90d5"
       def install
         bin.install "vecai"
       end
