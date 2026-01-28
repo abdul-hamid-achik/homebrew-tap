@@ -11,7 +11,7 @@ class Veclite < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/abdul-hamid-achik/veclite/releases/download/v0.6.0/veclite_0.6.0_darwin_amd64.tar.gz"
-      sha256 "5cca004ea9fad5cefd635978c31a0cedcef03a8a25f0230f4302ede76b54b9b8"
+      sha256 "af300b2c2f1751b49c744c029a2143727fe035f655b5cc41f44d1d870d176a90"
 
       def install
         bin.install "veclite"
@@ -19,7 +19,7 @@ class Veclite < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/abdul-hamid-achik/veclite/releases/download/v0.6.0/veclite_0.6.0_darwin_arm64.tar.gz"
-      sha256 "de7ebcddbe997249aa2fc280dda40759da8bc067587bf60fcf0744bcc7c8ff1e"
+      sha256 "7787c852031d5e75c12fdcb1dfcc511363c31153a70e3b4839fd2f8ac192493c"
 
       def install
         bin.install "veclite"
@@ -30,14 +30,14 @@ class Veclite < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/abdul-hamid-achik/veclite/releases/download/v0.6.0/veclite_0.6.0_linux_amd64.tar.gz"
-      sha256 "ad1fdcc5e1150217f4646169fd1a1910a76ce1c844faa8611e53b7e794722c71"
+      sha256 "d084dcd2c0e3995404022b90bda801677e0ce70837d6d6becba795b2cda1dfa0"
       def install
         bin.install "veclite"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/abdul-hamid-achik/veclite/releases/download/v0.6.0/veclite_0.6.0_linux_arm64.tar.gz"
-      sha256 "9214446aba3ab5886bdd2620f72c7aba65e6893d4008b8a494448537be6b5cfc"
+      sha256 "12cae2af27ce14adda3124f530f3212dc3c68778afece758fc1dbf7fa4d6a28a"
       def install
         bin.install "veclite"
       end
