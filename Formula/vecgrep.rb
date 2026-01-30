@@ -13,7 +13,7 @@ class Vecgrep < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/abdul-hamid-achik/vecgrep/releases/download/v1.2.0/vecgrep_1.2.0_darwin_amd64.tar.gz"
-      sha256 "8ea6e9b699f1add88ddf9614773b13096e85344bda759bff285f43bb40590bf9"
+      sha256 "20970b3e678350ec0ab6fc9e62cfaf5242126cf4cfc4074536edf2a5c64a0335"
 
       def install
         bin.install "vecgrep"
@@ -21,7 +21,7 @@ class Vecgrep < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/abdul-hamid-achik/vecgrep/releases/download/v1.2.0/vecgrep_1.2.0_darwin_arm64.tar.gz"
-      sha256 "146e24d80f971a2e66ea95ffb760fd165ebc1cb27b79dd6a0a67f952ff9ca400"
+      sha256 "b4d33f2212c3b92c5ee861c7c0b27e9b4eac1048f5c944b4a38381d9990eefb9"
 
       def install
         bin.install "vecgrep"
@@ -32,14 +32,14 @@ class Vecgrep < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/abdul-hamid-achik/vecgrep/releases/download/v1.2.0/vecgrep_1.2.0_linux_amd64.tar.gz"
-      sha256 "49ff520fa3137009a2b4b02a288b863ab505a06dc6d685a6a35a382b14ee026d"
+      sha256 "d5c3a717facdef83cf93248081ca1c5c36c0f700f4882c2354a941c84ef86487"
       def install
         bin.install "vecgrep"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/abdul-hamid-achik/vecgrep/releases/download/v1.2.0/vecgrep_1.2.0_linux_arm64.tar.gz"
-      sha256 "232708e106aead37548f491c706fe29b44bc8e1347e6ddeab7f6510945d227c6"
+      sha256 "e9b4e1abecd51b1559e04d71759438b90be6ff7b100780b493ce7ae8b4df4ce3"
       def install
         bin.install "vecgrep"
       end
