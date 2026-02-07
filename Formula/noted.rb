@@ -5,21 +5,21 @@
 class Noted < Formula
   desc "A CLI knowledge base to store and manage your notes efficiently"
   homepage "https://github.com/abdul-hamid-achik/noted"
-  version "0.6.0"
+  version "0.7.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abdul-hamid-achik/noted/releases/download/v0.6.0/noted_0.6.0_darwin_amd64.tar.gz"
-      sha256 "2c942765edd46cd2525ddd07ee54e354ee2ca15c42acbe60a4ed4a0d769d58df"
+      url "https://github.com/abdul-hamid-achik/noted/releases/download/v0.7.0/noted_0.7.0_darwin_amd64.tar.gz"
+      sha256 "faec517e4db2e5c7717845961fe7b6423d5e2ca37d5e259e4bddef05580f5d0b"
 
       def install
         bin.install "noted"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abdul-hamid-achik/noted/releases/download/v0.6.0/noted_0.6.0_darwin_arm64.tar.gz"
-      sha256 "854397b76c302ebdcf5523e3198205a4e3c6eb7a3ffdcdebcd85c5d3a035c38b"
+      url "https://github.com/abdul-hamid-achik/noted/releases/download/v0.7.0/noted_0.7.0_darwin_arm64.tar.gz"
+      sha256 "2dc8e5c76d49d9d02ed0f9dfeeba4f3e77708ea7d6178966c4f8d699e6f7110c"
 
       def install
         bin.install "noted"
@@ -29,15 +29,15 @@ class Noted < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/noted/releases/download/v0.6.0/noted_0.6.0_linux_amd64.tar.gz"
-      sha256 "66f2d0c27181d7d21cb64ada399ea3ef4451f68c602d44590d4c3565df54dca9"
+      url "https://github.com/abdul-hamid-achik/noted/releases/download/v0.7.0/noted_0.7.0_linux_amd64.tar.gz"
+      sha256 "0af166c107f092c66e818f436f7faea8ceadbbb085ef4203a346a6b5fe982707"
       def install
         bin.install "noted"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/noted/releases/download/v0.6.0/noted_0.6.0_linux_arm64.tar.gz"
-      sha256 "2421fce8f51307eef1cc95001145f8e44a5c74d6ec81c88098fb452c3274ede5"
+      url "https://github.com/abdul-hamid-achik/noted/releases/download/v0.7.0/noted_0.7.0_linux_arm64.tar.gz"
+      sha256 "6ff1b2be8ec0917bc95a36d01a9c6bc41e433a210f3c6aa6380b2b4a6ff38981"
       def install
         bin.install "noted"
       end
