@@ -3,7 +3,7 @@ cask "vecai" do
   name "vecai"
   desc "AI-powered codebase assistant with semantic search and Claude intelligence"
   homepage "https://github.com/abdul-hamid-achik/vecai"
-  version "0.18.0"
+  version "0.18.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "vecai" do
   on_macos do
     on_intel do
       url "https://github.com/abdul-hamid-achik/vecai/releases/download/v#{version}/vecai_#{version}_darwin_amd64.tar.gz"
-      sha256 "aff656a3f95f74c7b813e0bd8597986d9a09157f3dfab0a17c98fee3af21271b"
+      sha256 "11230352a5ceb282c56ad1dfed0a118dca40e392c3a92da788ba3f01577b28ae"
     end
     on_arm do
       url "https://github.com/abdul-hamid-achik/vecai/releases/download/v#{version}/vecai_#{version}_darwin_arm64.tar.gz"
-      sha256 "15980a3490b2ffeda3f7c2c1ed96e56d265aec79ace7a09a5951969ae04f0693"
+      sha256 "a5b50d81368f4b82dbabefe9ff7946f34f07360996a9263d90de52cd8657dcd1"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/abdul-hamid-achik/vecai/releases/download/v#{version}/vecai_#{version}_linux_amd64.tar.gz"
-      sha256 "623275bddfb5d7ed25e98eec5cc5adf034772cb0a1ac9836a7be4cf1971ece94"
+      sha256 "0ddcf8a4f5c25765b7b34b5df903cda46256124cdfdc63960265c5cbbd330abc"
     end
     on_arm do
       url "https://github.com/abdul-hamid-achik/vecai/releases/download/v#{version}/vecai_#{version}_linux_arm64.tar.gz"
-      sha256 "52270fb5aa3d79b382e3113b36c15f4ccd61a142f170a388b229dfd7d5cecfbd"
+      sha256 "2810aa9a240f6f0295e6b8e05e670191690726546d36875197f6a8c302339d7e"
     end
   end
 
