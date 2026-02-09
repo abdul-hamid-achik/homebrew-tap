@@ -11,7 +11,7 @@ class Hitspec < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/abdul-hamid-achik/hitspec/releases/download/v2.0.0/hitspec_2.0.0_darwin_amd64.tar.gz"
-      sha256 "f19b1617b8b90ba72049c3a2259ea060fcfa52aa02c3181e155cabd672084880"
+      sha256 "c3cd508de314e156a1279a83f555b7faf84057c4a3d6fd177ea982db818a6e46"
 
       def install
         bin.install "hitspec"
@@ -19,7 +19,7 @@ class Hitspec < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/abdul-hamid-achik/hitspec/releases/download/v2.0.0/hitspec_2.0.0_darwin_arm64.tar.gz"
-      sha256 "61712792d0353917f2ab4d0de2917b4ea8ce5a3020f9943e9c8c509b369d9e13"
+      sha256 "bf522070480e9b841328c6a14f67088fa66d3490cf8d8a62692fcdea7af3dbfa"
 
       def install
         bin.install "hitspec"
@@ -30,14 +30,14 @@ class Hitspec < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/abdul-hamid-achik/hitspec/releases/download/v2.0.0/hitspec_2.0.0_linux_amd64.tar.gz"
-      sha256 "640e25028889be193eeb27f0733ce2dbe3bbf3a07585173f5e8b43f6b4465e03"
+      sha256 "56fae03552a068ff37204174c0c7b59a5b54e2dd552b49af98d0c027ecd7bac0"
       def install
         bin.install "hitspec"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/abdul-hamid-achik/hitspec/releases/download/v2.0.0/hitspec_2.0.0_linux_arm64.tar.gz"
-      sha256 "65cf71b161b62703dc15b0c894254dcf897556a6cb12d95740d2594366f75702"
+      sha256 "7ab938f5fa438ff8817e1265935130940ad05b5a963232dcde32562cfa56634b"
       def install
         bin.install "hitspec"
       end
