@@ -5,21 +5,21 @@
 class Hitspec < Formula
   desc "Plain text API tests. No magic."
   homepage "https://github.com/abdul-hamid-achik/hitspec"
-  version "2.0.0"
+  version "2.0.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abdul-hamid-achik/hitspec/releases/download/v2.0.0/hitspec_2.0.0_darwin_amd64.tar.gz"
-      sha256 "eefc41e7e775ed9df0f103f81a2cabdb5d130699ce2b30d4296f1fd2c476fde9"
+      url "https://github.com/abdul-hamid-achik/hitspec/releases/download/v2.0.1/hitspec_2.0.1_darwin_amd64.tar.gz"
+      sha256 "6f8fedf20a09128516145a43175586a0bf2aa7fdfb77b2cf51cd784f80cb6223"
 
       def install
         bin.install "hitspec"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abdul-hamid-achik/hitspec/releases/download/v2.0.0/hitspec_2.0.0_darwin_arm64.tar.gz"
-      sha256 "a24ccace5e0c743e338bf5c3784d9d23711bab3372ca87a418c09f91c15c9718"
+      url "https://github.com/abdul-hamid-achik/hitspec/releases/download/v2.0.1/hitspec_2.0.1_darwin_arm64.tar.gz"
+      sha256 "1e793d7fec768db447d643c62059aa015375c369fdc73aaa877297d43c752c64"
 
       def install
         bin.install "hitspec"
@@ -29,15 +29,15 @@ class Hitspec < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/hitspec/releases/download/v2.0.0/hitspec_2.0.0_linux_amd64.tar.gz"
-      sha256 "1d6b4fe0fbce5e80ccc2f03f0975ab0af1e7cdb6697594327357f7604a506518"
+      url "https://github.com/abdul-hamid-achik/hitspec/releases/download/v2.0.1/hitspec_2.0.1_linux_amd64.tar.gz"
+      sha256 "6b44fb83315e3e530ece6ccba06e94b87e545e5bb2d8c15e1572ad86957dfe4a"
       def install
         bin.install "hitspec"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/hitspec/releases/download/v2.0.0/hitspec_2.0.0_linux_arm64.tar.gz"
-      sha256 "6d020ca520e75686090b5f94fdb77eedde61a737fbfebf130bf888dcf2fbbc79"
+      url "https://github.com/abdul-hamid-achik/hitspec/releases/download/v2.0.1/hitspec_2.0.1_linux_arm64.tar.gz"
+      sha256 "34cffc0cde74d8f2c35b9037afc339b8944a3f0a87f0b6b5d1cf7ddc0ac62fd2"
       def install
         bin.install "hitspec"
       end
