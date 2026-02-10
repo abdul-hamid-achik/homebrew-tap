@@ -11,7 +11,7 @@ class Vecai < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/abdul-hamid-achik/vecai/releases/download/v0.22.0/vecai_0.22.0_darwin_amd64.tar.gz"
-      sha256 "f1ae471f5212157e22a32281801036c859fd5c8febf10d8f6190ee1d4a1c5926"
+      sha256 "23a58808fbdab621259ab9642646d9bbff4292d4ff6b0379e888892c4d6eab4b"
 
       def install
         bin.install "vecai"
@@ -19,7 +19,7 @@ class Vecai < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/abdul-hamid-achik/vecai/releases/download/v0.22.0/vecai_0.22.0_darwin_arm64.tar.gz"
-      sha256 "aa5753adbb3e6e8de380ab6f1f91034f7622f74deab72c45df41861cd2c1c42b"
+      sha256 "15c9d52938dff7c35b100baf0f488c14be6c89ce1b566dd2afe89597a6cf27db"
 
       def install
         bin.install "vecai"
@@ -30,14 +30,14 @@ class Vecai < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/abdul-hamid-achik/vecai/releases/download/v0.22.0/vecai_0.22.0_linux_amd64.tar.gz"
-      sha256 "1a130cdc2e59f90d45b66323e036091a4c762d266085ba0196d48b825ac2fa74"
+      sha256 "fc12bfb19d6c8b8a347fbc99f3ff5893d951a2d160a1366f2050fb11fe9a0a3f"
       def install
         bin.install "vecai"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/abdul-hamid-achik/vecai/releases/download/v0.22.0/vecai_0.22.0_linux_arm64.tar.gz"
-      sha256 "221a1e346587cf0467234560c55ff11fec01c4557d3c5ab5fb07446a62ccdc03"
+      sha256 "e638527f01a82f80ddc15264b1bd643cc61f1e4706dee976a2225ddfb486fc1c"
       def install
         bin.install "vecai"
       end
