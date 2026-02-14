@@ -14,22 +14,22 @@ cask "vecai" do
   on_macos do
     on_intel do
       url "https://github.com/abdul-hamid-achik/vecai/releases/download/v#{version}/vecai_#{version}_darwin_amd64.tar.gz"
-      sha256 "290854a8126c7d3f4e633d6c017df19ed97237efd738d3c27196f02fd7afae11"
+      sha256 "bf6b734dfe869cb047c0c4bce8a0c644e9b56a9c7919b750133d85ca64922e13"
     end
     on_arm do
       url "https://github.com/abdul-hamid-achik/vecai/releases/download/v#{version}/vecai_#{version}_darwin_arm64.tar.gz"
-      sha256 "f05ae7297440634ef3490a40289f27200e3294ea12ac55db6400452d0d723cab"
+      sha256 "a766a9ed28f75e64cffac67e61c635a19e5be2a06828e520d5a5e21648a59693"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/abdul-hamid-achik/vecai/releases/download/v#{version}/vecai_#{version}_linux_amd64.tar.gz"
-      sha256 "4580d09ec731a2827ad3d0134266385d3a74f99be8dfeb534eec914e3a68ffb2"
+      sha256 "4cb202b88403b30012e22ad07c5519afe18ff8451d70e1eecd6bc55db8749d4f"
     end
     on_arm do
       url "https://github.com/abdul-hamid-achik/vecai/releases/download/v#{version}/vecai_#{version}_linux_arm64.tar.gz"
-      sha256 "0b98df1f41d040cec83703d60c56b0ffbaff84d6316ee09531c27523256ae9dd"
+      sha256 "b6f0075be04000afdabd9807c93e36e64c6e5868eaa09d1f99fcd7dcc98f624d"
     end
   end
 
