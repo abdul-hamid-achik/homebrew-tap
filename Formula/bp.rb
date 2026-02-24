@@ -11,7 +11,7 @@ class Bp < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/abdul-hamid-achik/blueprint/releases/download/v0.3.0/bp_0.3.0_Darwin_x86_64.tar.gz"
-      sha256 "91003676231fb63d1c33bf1df25c806c0fea63e982bdade3f5d57395c6dd9994"
+      sha256 "37e7b55a403f237d7b4ab50171af8a095109401d6cfdc19bae748dc1f06fc831"
 
       define_method(:install) do
         bin.install "bp"
@@ -19,7 +19,7 @@ class Bp < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/abdul-hamid-achik/blueprint/releases/download/v0.3.0/bp_0.3.0_Darwin_arm64.tar.gz"
-      sha256 "9b85d41942c2c138c4f7a6c8bf6f46547d5d82490223f65002ed4348b44caf5f"
+      sha256 "0de9428053508afed91e59d269dbe90f7d7cd66e3b7ab91c5dda88b20d40b561"
 
       define_method(:install) do
         bin.install "bp"
@@ -30,14 +30,14 @@ class Bp < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/abdul-hamid-achik/blueprint/releases/download/v0.3.0/bp_0.3.0_Linux_x86_64.tar.gz"
-      sha256 "0810dfe7f61ac9c6b3c242a33c9c5d68335da1310e4d2fbaad9b484c8a35b3a2"
+      sha256 "12fd9385904466b359c8d5bc8f8e2b29ecb6ad323e1968a43edfa5256fc5448a"
       define_method(:install) do
         bin.install "bp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/abdul-hamid-achik/blueprint/releases/download/v0.3.0/bp_0.3.0_Linux_arm64.tar.gz"
-      sha256 "22e454e1883c19493ff0041617082268f403a613405acdeae907fcdf2b55f155"
+      sha256 "c8068453f091ac5c13e5cb1ce3cc70f51488e872aa8a227a185d041b02251b1c"
       define_method(:install) do
         bin.install "bp"
       end
