@@ -14,22 +14,22 @@ cask "fc" do
   on_macos do
     on_intel do
       url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v#{version}/fc_#{version}_darwin_amd64.tar.gz"
-      sha256 "3b7997318dbc54683845996c2932ce2b24a19276f141e80b3ba666e75416f2f7"
+      sha256 "31a64ed5ca0d59e5915269cdb69b8953dce74c9f215d03a163c75e1eba3d841c"
     end
     on_arm do
       url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v#{version}/fc_#{version}_darwin_arm64.tar.gz"
-      sha256 "145a31e4656fa79acb39c258d117f522fe782d54c7971ce55c51260c7b510f8c"
+      sha256 "00a40949a25cde0e9cb3c0161e09e2df67ff8303d23efece6f032b2a1bbd43c8"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v#{version}/fc_#{version}_linux_amd64.tar.gz"
-      sha256 "816d47abd8d29a6b95dedb8d8c169ebf82714a347bb51842f2b02695b3f11f9b"
+      sha256 "653ad8244345d825e16d791a0cd38b8c90ebe0641102651b82d6ef8ea9e6e145"
     end
     on_arm do
       url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v#{version}/fc_#{version}_linux_arm64.tar.gz"
-      sha256 "1662300cd7cdaeae532d0bbac682b43fa7078b77fe6f20e74e93840f88328fe7"
+      sha256 "0d50c25a763f6ef7a2504eaff00a33d0a32149f00d4e2d4d468ccf6411c53e55"
     end
   end
 
