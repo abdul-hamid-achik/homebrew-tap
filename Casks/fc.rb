@@ -3,7 +3,7 @@ cask "fc" do
   name "fc"
   desc "Local file processing CLI and MCP server for images, PDFs, and videos"
   homepage "https://file.cheap"
-  version "0.13.0"
+  version "0.14.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "fc" do
   on_macos do
     on_intel do
       url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v#{version}/fc_#{version}_darwin_amd64.tar.gz"
-      sha256 "7f8b3a65164b648befdfa6a733c046fef485c02369a784f7e2bc67664844619e"
+      sha256 "3b7997318dbc54683845996c2932ce2b24a19276f141e80b3ba666e75416f2f7"
     end
     on_arm do
       url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v#{version}/fc_#{version}_darwin_arm64.tar.gz"
-      sha256 "b0e0276755502bdc36c1cfa0a0faedf4f4df4da183dfc4654ca1f22f74cc55d7"
+      sha256 "145a31e4656fa79acb39c258d117f522fe782d54c7971ce55c51260c7b510f8c"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v#{version}/fc_#{version}_linux_amd64.tar.gz"
-      sha256 "2e2eddf5283e7bcea1d92d81b03e2bc6a8730e2f1f282b467d436bf60147870e"
+      sha256 "816d47abd8d29a6b95dedb8d8c169ebf82714a347bb51842f2b02695b3f11f9b"
     end
     on_arm do
       url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v#{version}/fc_#{version}_linux_arm64.tar.gz"
-      sha256 "bd6cf58c01998b21cc00cd8b49176b239da9762a094dce838beba08850780f19"
+      sha256 "1662300cd7cdaeae532d0bbac682b43fa7078b77fe6f20e74e93840f88328fe7"
     end
   end
 
