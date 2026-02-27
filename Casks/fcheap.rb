@@ -3,7 +3,7 @@ cask "fcheap" do
   name "fcheap"
   desc "Local file processing CLI and MCP server for images, PDFs, and videos"
   homepage "https://file.cheap"
-  version "0.15.0"
+  version "0.15.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,23 +14,32 @@ cask "fcheap" do
   on_macos do
     on_intel do
       url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v#{version}/fcheap_#{version}_darwin_amd64.tar.gz"
-      sha256 "c26a9f87f439c93ecc6942e19bf1fb0c0e34affcb8d8be0d029faa39e28a81d9"
+      sha256 "d639e4bed212dd4c180219a598257297916b2f490ad307e4ed36c6889a3abaee"
     end
     on_arm do
       url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v#{version}/fcheap_#{version}_darwin_arm64.tar.gz"
-      sha256 "a2c08a1f77e2af3453a38c61b1fadb4382658fdc6bacc280852cc625448050fd"
+      sha256 "a45ce64b9ecf7d7fe3095a44881661eb0411d30c6552e0cb5a44ffd690e1b527"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v#{version}/fcheap_#{version}_linux_amd64.tar.gz"
-      sha256 "abd22a15d12aecc1c23d5d613af2aaa7e75a692583929e825df668e0deb1cc2e"
+      sha256 "6d7833ef1ae1cf34cd12475c91fbd5b9126fc0598f0e779bee11e98d9518e1fb"
     end
     on_arm do
       url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v#{version}/fcheap_#{version}_linux_arm64.tar.gz"
-      sha256 "c041ec7574a0d10945823d5d51b93055d4982dbd6a938fbb288d0f5ff4c47367"
+      sha256 "dffb4e5a932fb900bce20f0a313a7af3e1af0f3e7fc7b6402eb5e4ff1ca3a7af"
     end
+  end
+
+  caveats do
+    "The binary is not signed with an Apple Developer certificate."
+    "macOS may show a security warning on first run. To fix:"
+    ""
+    "  xattr -d com.apple.quarantine "$(brew --prefix)/Caskroom/fcheap/#{version}/fcheap""
+    ""
+    "Or install with: brew install --no-quarantine abdul-hamid-achik/tap/fcheap"
   end
 
   # No zap stanza required
