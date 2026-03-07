@@ -5,21 +5,21 @@
 class Monitor < Formula
   desc "Terminal-based system monitor for macOS (Apple Silicon) built with Go"
   homepage "https://github.com/abdul-hamid-achik/monitor"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/abdul-hamid-achik/monitor/releases/download/v0.1.0/monitor_0.1.0_Darwin_x86_64.tar.gz"
-    sha256 "a384de045a2ddbd0b892c91ade96608f65299a62284c8092dcf26c9259e6aaec"
+    url "https://github.com/abdul-hamid-achik/monitor/releases/download/v0.2.0/monitor_0.2.0_Darwin_x86_64.tar.gz"
+    sha256 "949e849fd193b8ee0e2b418f8e84e8a9928331241785cf3fd947a7b7ea3954bf"
 
     define_method(:install) do
       bin.install "monitor"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/abdul-hamid-achik/monitor/releases/download/v0.1.0/monitor_0.1.0_Darwin_arm64.tar.gz"
-    sha256 "24d30e24429028fa66a30655d30deb1ce5f7e2f69cf26097d3242fff140edbae"
+    url "https://github.com/abdul-hamid-achik/monitor/releases/download/v0.2.0/monitor_0.2.0_Darwin_arm64.tar.gz"
+    sha256 "32a0cb594031616bd60716275d5a9ce17298ca56d19facb356def46263e1d956"
 
     define_method(:install) do
       bin.install "monitor"
