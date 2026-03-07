@@ -11,7 +11,7 @@ class Teak < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/abdul-hamid-achik/teak/releases/download/v0.1.2/teak_0.1.2_Darwin_x86_64.tar.gz"
-      sha256 "710d51ac85235689d6fbb8ba809abcf44f67fb853d719af538d33a86d1c7be6a"
+      sha256 "7ac0ade3d1fd3bff4692b99367bf97053ff81bbbbc4f44ad2a0bc681455b6d2f"
 
       define_method(:install) do
         bin.install "teak"
@@ -19,7 +19,7 @@ class Teak < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/abdul-hamid-achik/teak/releases/download/v0.1.2/teak_0.1.2_Darwin_arm64.tar.gz"
-      sha256 "8c73e56cf42b5c316393642b7332d6122559e75a457315d796c2e5156c39f585"
+      sha256 "206f56cc1a2c8e49f75f7c9a2a07412d8faea6f9c265dab8e3d8f911f37e6358"
 
       define_method(:install) do
         bin.install "teak"
@@ -30,14 +30,14 @@ class Teak < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/abdul-hamid-achik/teak/releases/download/v0.1.2/teak_0.1.2_Linux_x86_64.tar.gz"
-      sha256 "f92ad5d610c2c15719af7ed78e996c113143072c6623a6cbe890fa83ddfa7a78"
+      sha256 "c225c9967bfaaa5b6abe25194f1ad1e62e8b5d9bda0b8b4abdb55886ee4e551f"
       define_method(:install) do
         bin.install "teak"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/abdul-hamid-achik/teak/releases/download/v0.1.2/teak_0.1.2_Linux_arm64.tar.gz"
-      sha256 "c1f698d2e1237f82122fda41bb13539ccae908441d66186b87034adf75a85108"
+      sha256 "d8d3794c56912bcd513c2bd4728ee65daf9b5bc4eb1b08c1bf0c50a9cfb291ac"
       define_method(:install) do
         bin.install "teak"
       end
