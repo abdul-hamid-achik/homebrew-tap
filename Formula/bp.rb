@@ -5,21 +5,21 @@
 class Bp < Formula
   desc "Blueprint language toolchain — compile .bp files to TypeScript/Node.js projects"
   homepage "https://github.com/abdul-hamid-achik/blueprint"
-  version "0.5.0"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abdul-hamid-achik/blueprint/releases/download/v0.5.0/bp_0.5.0_Darwin_x86_64.tar.gz"
-      sha256 "53ac4bd634e0ffed12035d6851cc6cd5ad4d48589cc19f9de5858a1dc1d45663"
+      url "https://github.com/abdul-hamid-achik/blueprint/releases/download/v0.6.0/bp_0.6.0_Darwin_x86_64.tar.gz"
+      sha256 "0e48fea6db325a30903af6841b1e9a91514a46737abbac07d4605467792c83de"
 
       define_method(:install) do
         bin.install "bp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abdul-hamid-achik/blueprint/releases/download/v0.5.0/bp_0.5.0_Darwin_arm64.tar.gz"
-      sha256 "a2208a62f620d613a33330abbb61eb9e76c9533b61f109535781d56b266655e2"
+      url "https://github.com/abdul-hamid-achik/blueprint/releases/download/v0.6.0/bp_0.6.0_Darwin_arm64.tar.gz"
+      sha256 "31ce0d224984f48fb2d0126b4f15f7feb382929672b7d125e0f97042f445384e"
 
       define_method(:install) do
         bin.install "bp"
@@ -29,15 +29,15 @@ class Bp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/blueprint/releases/download/v0.5.0/bp_0.5.0_Linux_x86_64.tar.gz"
-      sha256 "d2e651eb5cce6fd3c60439377c078111d966224502e7b079497e0515d8cc3102"
+      url "https://github.com/abdul-hamid-achik/blueprint/releases/download/v0.6.0/bp_0.6.0_Linux_x86_64.tar.gz"
+      sha256 "69fc35f8ddc1d98011df7da3b7236a072e0cf8ad84931bb229139d6fe000143f"
       define_method(:install) do
         bin.install "bp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/blueprint/releases/download/v0.5.0/bp_0.5.0_Linux_arm64.tar.gz"
-      sha256 "e041752293606b4a5cdb647164458c2cedd1a52f26d1540c69beb27bd1e3fd70"
+      url "https://github.com/abdul-hamid-achik/blueprint/releases/download/v0.6.0/bp_0.6.0_Linux_arm64.tar.gz"
+      sha256 "0fc86cba129c490fc7fc74a608f072b3f00d90f729155797bd12c0e2baeea1cd"
       define_method(:install) do
         bin.install "bp"
       end
