@@ -5,21 +5,21 @@
 class Tvault < Formula
   desc "Dead simple secrets management CLI and MCP server"
   homepage "https://github.com/abdul-hamid-achik/tinyvault"
-  version "0.7.0"
+  version "0.8.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abdul-hamid-achik/tinyvault/releases/download/v0.7.0/tvault_0.7.0_darwin_amd64.tar.gz"
-      sha256 "4c78e6146864c980e6410a244daee0cade9d27cb63e8e1bf38e5ca42a29eee75"
+      url "https://github.com/abdul-hamid-achik/tinyvault/releases/download/v0.8.0/tvault_0.8.0_darwin_amd64.tar.gz"
+      sha256 "243df497a84984f46bdb1f147060e3e8609057c692b0a53a5bfcddf5d280ec38"
 
       define_method(:install) do
         bin.install "tvault"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abdul-hamid-achik/tinyvault/releases/download/v0.7.0/tvault_0.7.0_darwin_arm64.tar.gz"
-      sha256 "465db66f2b242dafe577ff856a3ff20912de0c143c5ad1d046b1fb8f26b29bc8"
+      url "https://github.com/abdul-hamid-achik/tinyvault/releases/download/v0.8.0/tvault_0.8.0_darwin_arm64.tar.gz"
+      sha256 "a450c294ec2d60e7a89ad44179167c50af75849b00baf78257f0e2eaa372a45c"
 
       define_method(:install) do
         bin.install "tvault"
@@ -29,15 +29,15 @@ class Tvault < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/tinyvault/releases/download/v0.7.0/tvault_0.7.0_linux_amd64.tar.gz"
-      sha256 "b0773f7f064f7b938af520dfb6db17d024c2c097f25e0cd6708d3f5f4dbcf33a"
+      url "https://github.com/abdul-hamid-achik/tinyvault/releases/download/v0.8.0/tvault_0.8.0_linux_amd64.tar.gz"
+      sha256 "518e10e0c0c045cc69edb1c7088048058812ce3a3f3a450673e882a7b3afae4e"
       define_method(:install) do
         bin.install "tvault"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/tinyvault/releases/download/v0.7.0/tvault_0.7.0_linux_arm64.tar.gz"
-      sha256 "fd3dbc8759c0cf3a05b2e8bb25a884367fcdc768497447a9200414882f46c09f"
+      url "https://github.com/abdul-hamid-achik/tinyvault/releases/download/v0.8.0/tvault_0.8.0_linux_arm64.tar.gz"
+      sha256 "36a2f3c4aac2d88e954962825d744646caa229c58fde44cc2a3f61863ea3b987"
       define_method(:install) do
         bin.install "tvault"
       end
