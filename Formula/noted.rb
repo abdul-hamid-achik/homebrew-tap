@@ -5,21 +5,21 @@
 class Noted < Formula
   desc "A CLI knowledge base to store and manage your notes efficiently"
   homepage "https://github.com/abdul-hamid-achik/noted"
-  version "0.11.1"
+  version "0.12.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abdul-hamid-achik/noted/releases/download/v0.11.1/noted_0.11.1_darwin_amd64.tar.gz"
-      sha256 "e6052adc89d577a348546fd8e2d6c49965d04274d669f6d375d0e97c07e8070b"
+      url "https://github.com/abdul-hamid-achik/noted/releases/download/v0.12.0/noted_0.12.0_darwin_amd64.tar.gz"
+      sha256 "5932abbd5e9ebf68564ee1a30f8ff32f2d32318214b1f9b37d3a7fc094eeee80"
 
       define_method(:install) do
         bin.install "noted"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abdul-hamid-achik/noted/releases/download/v0.11.1/noted_0.11.1_darwin_arm64.tar.gz"
-      sha256 "780d643258245e5789d8cb746183b5b3bb4fe808a69e2c9fab76e3ae2989155b"
+      url "https://github.com/abdul-hamid-achik/noted/releases/download/v0.12.0/noted_0.12.0_darwin_arm64.tar.gz"
+      sha256 "cd4326a7abf0216cfd6bf0cc24503db57b2839aa4df3633284bceb2299d45380"
 
       define_method(:install) do
         bin.install "noted"
@@ -29,15 +29,15 @@ class Noted < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/noted/releases/download/v0.11.1/noted_0.11.1_linux_amd64.tar.gz"
-      sha256 "5317f33ebe3454eb39b4a0de82d4e9988eaab7e2ea9046f5180fef70b3a40d67"
+      url "https://github.com/abdul-hamid-achik/noted/releases/download/v0.12.0/noted_0.12.0_linux_amd64.tar.gz"
+      sha256 "55589c7f59c3b79b314fda471b76e1fce24bd610ffa8606b3510952113f4e105"
       define_method(:install) do
         bin.install "noted"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/noted/releases/download/v0.11.1/noted_0.11.1_linux_arm64.tar.gz"
-      sha256 "579ffd4f0626495e55fdffe6a49bdb44a6151a16de733f83f9b527bfb697bfae"
+      url "https://github.com/abdul-hamid-achik/noted/releases/download/v0.12.0/noted_0.12.0_linux_arm64.tar.gz"
+      sha256 "a065dca65cc4e0aa6d9932bfe1887186e02908038aab7492079baf356817dde6"
       define_method(:install) do
         bin.install "noted"
       end
