@@ -11,7 +11,7 @@ class Tvault < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/abdul-hamid-achik/tinyvault/releases/download/v0.13.0/tvault_0.13.0_darwin_amd64.tar.gz"
-      sha256 "379aed6cebdf76c29c85f94a755b5c274b827c7333e417ada000c46d7ae67694"
+      sha256 "505a6d22d5b1b7f039e2914501d46f9afa8788fc7e487d8ec298cf33f37b4fbb"
 
       define_method(:install) do
         bin.install "tvault"
@@ -19,7 +19,7 @@ class Tvault < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/abdul-hamid-achik/tinyvault/releases/download/v0.13.0/tvault_0.13.0_darwin_arm64.tar.gz"
-      sha256 "69c4630733f18dc3d745b6b8329a2dd82da8109b795649a1a467a00c548f2a02"
+      sha256 "c602b159e5539502292bac98fc07628ce0c29668d73dce1cf4e850babeb54001"
 
       define_method(:install) do
         bin.install "tvault"
@@ -30,14 +30,14 @@ class Tvault < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/abdul-hamid-achik/tinyvault/releases/download/v0.13.0/tvault_0.13.0_linux_amd64.tar.gz"
-      sha256 "33e90fc007ace48753073771cc47591e7794060ed45c0cf4ee2415fca215fc5f"
+      sha256 "215efd821efe22f3176990afd874912dd7365a71b17a5227decf357756cd398c"
       define_method(:install) do
         bin.install "tvault"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/abdul-hamid-achik/tinyvault/releases/download/v0.13.0/tvault_0.13.0_linux_arm64.tar.gz"
-      sha256 "0d21387bbaa0cddb3ab810be97e940bb92319bf7a054ba3f229b2e026a5a5727"
+      sha256 "54df5b40de731be1be50f5b2146cb55c9541c348dae658fb74ab4c914d02f005"
       define_method(:install) do
         bin.install "tvault"
       end
