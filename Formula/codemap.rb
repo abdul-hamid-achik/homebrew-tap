@@ -5,23 +5,23 @@
 class Codemap < Formula
   desc "Local-first code intelligence: a code graph + semantic search for agents and people"
   homepage "https://github.com/abdul-hamid-achik/codemap"
-  version "0.10.0"
+  version "0.11.0"
   license "MIT"
 
   depends_on "ollama" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abdul-hamid-achik/codemap/releases/download/v0.10.0/codemap_0.10.0_darwin_amd64.tar.gz"
-      sha256 "fd6f0e24167d4b991b0a702c59dd4a1d194a471423dc0b1f53002d8508b18be4"
+      url "https://github.com/abdul-hamid-achik/codemap/releases/download/v0.11.0/codemap_0.11.0_darwin_amd64.tar.gz"
+      sha256 "2eed4e1e04361832953933f1dd0fb6503f817d7cf262ff36165dbac98f180432"
 
       define_method(:install) do
         bin.install "codemap"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abdul-hamid-achik/codemap/releases/download/v0.10.0/codemap_0.10.0_darwin_arm64.tar.gz"
-      sha256 "bd52c617d98eb4bd001e5d18c9902a3623f7c3d89c29814d7f2d7f8bd10bedaf"
+      url "https://github.com/abdul-hamid-achik/codemap/releases/download/v0.11.0/codemap_0.11.0_darwin_arm64.tar.gz"
+      sha256 "36d80516c17050d121dda7760f313ede68165844d9a03c4e88ec1a1df011bfaf"
 
       define_method(:install) do
         bin.install "codemap"
@@ -31,15 +31,15 @@ class Codemap < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/codemap/releases/download/v0.10.0/codemap_0.10.0_linux_amd64.tar.gz"
-      sha256 "f8b8b5166209882f1759adee9e5342fce845d7f489267f268b5984946ecde560"
+      url "https://github.com/abdul-hamid-achik/codemap/releases/download/v0.11.0/codemap_0.11.0_linux_amd64.tar.gz"
+      sha256 "30f001cfb9850c4410d451c2f685f2fb6792496798ba9a084d3dbc9eae632889"
       define_method(:install) do
         bin.install "codemap"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/codemap/releases/download/v0.10.0/codemap_0.10.0_linux_arm64.tar.gz"
-      sha256 "d8afec9ee35bd4e83668e00c0169c7be6eeb5ecc0dcb9c3cacfb8de491137340"
+      url "https://github.com/abdul-hamid-achik/codemap/releases/download/v0.11.0/codemap_0.11.0_linux_arm64.tar.gz"
+      sha256 "326ade15c6d8267b6e35b3d09604f1a311a5ebe0b8d197bcbef9338cb83585b2"
       define_method(:install) do
         bin.install "codemap"
       end
