@@ -5,23 +5,23 @@
 class Vecgrep < Formula
   desc "Local-first semantic code search powered by embeddings"
   homepage "https://github.com/abdul-hamid-achik/vecgrep"
-  version "2.6.0"
+  version "2.7.0"
   license "MIT"
 
   depends_on "ollama" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abdul-hamid-achik/vecgrep/releases/download/v2.6.0/vecgrep_2.6.0_darwin_amd64.tar.gz"
-      sha256 "9ee426de37b082ab259a15442e7840b6e7af145b0ce92e13fd0ab792eef3b6bc"
+      url "https://github.com/abdul-hamid-achik/vecgrep/releases/download/v2.7.0/vecgrep_2.7.0_darwin_amd64.tar.gz"
+      sha256 "442c47263260cd125caec78a640864dcea155e7b979f3a76f383233b50fa7848"
 
       define_method(:install) do
         bin.install "vecgrep"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abdul-hamid-achik/vecgrep/releases/download/v2.6.0/vecgrep_2.6.0_darwin_arm64.tar.gz"
-      sha256 "932a36037f3570615c9cd6a47aff9f02cd7fabbd0a68d3d981acd5b65a919c32"
+      url "https://github.com/abdul-hamid-achik/vecgrep/releases/download/v2.7.0/vecgrep_2.7.0_darwin_arm64.tar.gz"
+      sha256 "21a4daee9e4f6a9b6adc6df03c69faf77bb6b19a6534e359194d74084cc45bd0"
 
       define_method(:install) do
         bin.install "vecgrep"
@@ -31,15 +31,15 @@ class Vecgrep < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/vecgrep/releases/download/v2.6.0/vecgrep_2.6.0_linux_amd64.tar.gz"
-      sha256 "b4a6459d780d9871390e33089994f0e603ea1d41560606adac35c44e22f198db"
+      url "https://github.com/abdul-hamid-achik/vecgrep/releases/download/v2.7.0/vecgrep_2.7.0_linux_amd64.tar.gz"
+      sha256 "979c1086678236a42a2a88c71dad0a6c0b14216e57cc6d61fd081626fbe44f62"
       define_method(:install) do
         bin.install "vecgrep"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/vecgrep/releases/download/v2.6.0/vecgrep_2.6.0_linux_arm64.tar.gz"
-      sha256 "a4fcc228fd6287f9a7d427a681a3a6c2a9bd5c1ccfbd5d6717be94eeda1fda5b"
+      url "https://github.com/abdul-hamid-achik/vecgrep/releases/download/v2.7.0/vecgrep_2.7.0_linux_arm64.tar.gz"
+      sha256 "598b668e56183b9f65df99cb35c38b1d711212526d4f5bcc0be03aa0640e3158"
       define_method(:install) do
         bin.install "vecgrep"
       end
