@@ -4,22 +4,22 @@ cask "fcheap" do
 
   on_macos do
     on_intel do
-      sha256 "000d4a038ff626aa4a923071bb625669ec5eb0e70b0dbb71722f1445cbd8adc0"
+      sha256 "3b2f8118b51fc551d57c87b5a742c5112b3b216664aab48403a08252e61eb40d"
       url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v#{version}/fcheap_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "0447d6eedd750a970c7eaa26dd7b7395cb4ca71c07295c403b8b9f2219e4cd09"
+      sha256 "bac33c091a2cf139d044605e05961334ea8108aef544d3b021588c1de9e0266a"
       url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v#{version}/fcheap_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "fa44837af10bb3ebc6a52f2b9d5c2f0f797dffd3b4788e14d0a33de6de30fdbb"
+      sha256 "3177012679fe25ad106f3b74d669c81949f7c3708a785b7c7a4eb5085a2cd880"
       url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v#{version}/fcheap_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "ac8d14fb8657be19a9a576e879eb90981d219ebc9d779edeff2e31ab5748ee31"
+      sha256 "682eb7e5146b03bb9499878c2d65e176020bf4a9cdc65495427153534070588c"
       url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v#{version}/fcheap_#{version}_linux_arm64.tar.gz"
     end
   end
