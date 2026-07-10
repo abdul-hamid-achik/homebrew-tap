@@ -4,22 +4,22 @@ cask "vidtrace" do
 
   on_macos do
     on_intel do
-      sha256 "e0dcf6655b1edc24674d86d08232cc0cab3d877453b1f315168f4e89c78a9f1c"
+      sha256 "fd993b754cf94b1a4be7cd28c0a0f68e0bb6e79eb3f2d4011c259e5ed6d9f4f9"
       url "https://github.com/abdul-hamid-achik/vidtrace/releases/download/v#{version}/vidtrace_#{version}_darwin_amd64.tar.gz"
     end
     on_arm do
-      sha256 "eea4f12a86991fbb546bb80ce19f779801b87233dc5db9f22c41d42be0f2cbbb"
+      sha256 "c22f48622a1d746d20fe40aa5ab795bfee2acedb821d67ce8cf3b846c4f132fd"
       url "https://github.com/abdul-hamid-achik/vidtrace/releases/download/v#{version}/vidtrace_#{version}_darwin_arm64.tar.gz"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "bd9c881a645bb75e09c89835ca55abcd90c8fd3a13243a7bd435cd647e58f7e3"
+      sha256 "d038f504113f57b322ba129c6a19d75c4df5b56cd8ca1b5feceea3236a43a88d"
       url "https://github.com/abdul-hamid-achik/vidtrace/releases/download/v#{version}/vidtrace_#{version}_linux_amd64.tar.gz"
     end
     on_arm do
-      sha256 "8a5135c54b2329f815265cd5318411d3ae9e01ef7d8abdaab5de4b0d9d645ac9"
+      sha256 "b06a33b262c6efda8505ee291ab3f35e200de551a78e4d44f2f626d1a2e2e2eb"
       url "https://github.com/abdul-hamid-achik/vidtrace/releases/download/v#{version}/vidtrace_#{version}_linux_arm64.tar.gz"
     end
   end
