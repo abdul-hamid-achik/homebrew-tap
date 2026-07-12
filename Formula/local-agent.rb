@@ -5,21 +5,21 @@
 class LocalAgent < Formula
   desc "Local AI agent with TUI, powered by Ollama and MCP servers"
   homepage "https://github.com/abdul-hamid-achik/local-agent"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abdul-hamid-achik/local-agent/releases/download/v0.4.0/local-agent_0.4.0_darwin_amd64.tar.gz"
-      sha256 "b9606d09a8690a52eb36483f8cca625975a8ff5482ceba19ef3a1646d7d67f14"
+      url "https://github.com/abdul-hamid-achik/local-agent/releases/download/v0.5.0/local-agent_0.5.0_darwin_amd64.tar.gz"
+      sha256 "a3d6933182d3fe2d76c615987fa61b3ecbd21192d61bea658b2bcdbd6a8185db"
 
       define_method(:install) do
         bin.install "local-agent"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abdul-hamid-achik/local-agent/releases/download/v0.4.0/local-agent_0.4.0_darwin_arm64.tar.gz"
-      sha256 "ed3ff30c6199a5f26808d9f30a451343ba17aff37cc828cc48c299f6be270239"
+      url "https://github.com/abdul-hamid-achik/local-agent/releases/download/v0.5.0/local-agent_0.5.0_darwin_arm64.tar.gz"
+      sha256 "57603d0ef694ab08da0cf993bed4fc730f2f47c4357895fcac9cb6c3e5435f4d"
 
       define_method(:install) do
         bin.install "local-agent"
@@ -29,15 +29,15 @@ class LocalAgent < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/local-agent/releases/download/v0.4.0/local-agent_0.4.0_linux_amd64.tar.gz"
-      sha256 "c473c6b8f6c649e52ff826f8bc128c40b80cf185d0417795ebaa60a733091de5"
+      url "https://github.com/abdul-hamid-achik/local-agent/releases/download/v0.5.0/local-agent_0.5.0_linux_amd64.tar.gz"
+      sha256 "c53d312138b53543127e1a185e6c392fee6054b099a1fcefc11d44acf4bf159b"
       define_method(:install) do
         bin.install "local-agent"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/local-agent/releases/download/v0.4.0/local-agent_0.4.0_linux_arm64.tar.gz"
-      sha256 "247f762c796ca8e0df793d44465ba34cae89dbb2d9bdeb02c76ab72ff6b6f496"
+      url "https://github.com/abdul-hamid-achik/local-agent/releases/download/v0.5.0/local-agent_0.5.0_linux_arm64.tar.gz"
+      sha256 "296c14ec0a3ec932eff3f81daa24ac95460a2888abac2a2275067c897baf3187"
       define_method(:install) do
         bin.install "local-agent"
       end
