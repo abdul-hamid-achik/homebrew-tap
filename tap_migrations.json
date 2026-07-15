@@ -1,5 +1,6 @@
 {
   "codemap": "codemap",
+  "local-agent": "local-agent",
   "tvault": "tvault",
   "veclite": "veclite"
 }
