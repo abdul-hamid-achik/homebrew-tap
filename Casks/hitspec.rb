@@ -3,7 +3,7 @@ cask "hitspec" do
   name "hitspec"
   desc "Plain text API tests. No magic."
   homepage "https://github.com/abdul-hamid-achik/hitspec"
-  version "2.18.0"
+  version "2.18.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -11,30 +11,30 @@ cask "hitspec" do
 
   binary "hitspec"
 
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/hitspec"] if OS.mac?
-  end
-
   on_macos do
     on_intel do
       url "https://github.com/abdul-hamid-achik/hitspec/releases/download/v#{version}/hitspec_#{version}_darwin_amd64.tar.gz"
-      sha256 "e87b73992881e88c34b19e0f08c75f1c9a412385a7b3ae5d5412a3d53cbf8241"
+      sha256 "c1a7e991d2c0c359a1ec00ae7c8c6eed10cb7bc298b4f535904202947213afbf"
     end
     on_arm do
       url "https://github.com/abdul-hamid-achik/hitspec/releases/download/v#{version}/hitspec_#{version}_darwin_arm64.tar.gz"
-      sha256 "ae809d52a95c0d0d0fa198bfceea9168ae013090b03e027e4cbcb9423d6589fd"
+      sha256 "a9467e3db2477282e2284954657e579c08a8fe6de731524da6d0b9a569dd7b26"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/abdul-hamid-achik/hitspec/releases/download/v#{version}/hitspec_#{version}_linux_amd64.tar.gz"
-      sha256 "7f50af2fc03da9e3e114e597a13628fb897c6fba875c39a27c3565fd3ca3ddee"
+      sha256 "21f7654bd691410536db43d2409e6b5018b6e1b10b2b32b76a9777af30a2aee5"
     end
     on_arm do
       url "https://github.com/abdul-hamid-achik/hitspec/releases/download/v#{version}/hitspec_#{version}_linux_arm64.tar.gz"
-      sha256 "c1113641a1079d30a93a6276971afed458e73ce2fc42324bc3e77b7da790e3e0"
+      sha256 "db40db3adb8c0de3a6eb14340e9172331cbdc5abb775a3dcd8b7247e8e8c90f7"
     end
+  end
+
+  postflight do
+    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/hitspec"] if OS.mac?
   end
 
   # No zap stanza required
