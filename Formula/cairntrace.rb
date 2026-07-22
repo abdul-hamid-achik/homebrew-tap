@@ -8,9 +8,9 @@
 class Cairntrace < Formula
   desc "Behavioral browser-spec layer for agent-in-session use"
   homepage "https://github.com/abdul-hamid-achik/cairntrace"
-  url "https://github.com/abdul-hamid-achik/cairntrace/archive/refs/tags/v1.25.0.tar.gz"
-  version "1.25.0"
-  sha256 "a5ddda63b031760de70ba4e57943a44b2befb613669c67750abc2fe8d58b8bd2"
+  url "https://github.com/abdul-hamid-achik/cairntrace/archive/refs/tags/v1.47.0.tar.gz"
+  version "1.47.0"
+  sha256 "449eaabbfa8eda396df71fe75d9d1d6acab565a27509f4b75a03aac11b1e770e"
   license "MIT"
 
   depends_on "bun"
