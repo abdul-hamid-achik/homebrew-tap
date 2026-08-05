@@ -5,21 +5,21 @@
 class Teak < Formula
   desc "Teak — A modern terminal code editor built with Go"
   homepage "https://github.com/abdul-hamid-achik/teak"
-  version "0.10.15"
+  version "0.10.16"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abdul-hamid-achik/teak/releases/download/v0.10.15/teak_0.10.15_Darwin_x86_64.tar.gz"
-      sha256 "99431ef62e4540d6f7718e4d40cc50b6e34f9fa7fda09763926674f07dcb04ef"
+      url "https://github.com/abdul-hamid-achik/teak/releases/download/v0.10.16/teak_0.10.16_Darwin_x86_64.tar.gz"
+      sha256 "790d38894781c0a72372adf63a965b4784cd8ea4471594dceea575b4f770c74b"
 
       define_method(:install) do
         bin.install "teak"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abdul-hamid-achik/teak/releases/download/v0.10.15/teak_0.10.15_Darwin_arm64.tar.gz"
-      sha256 "07dc7ea3e98cb10d9b41fb2ee3f6c6848df213b9e8e32c9514dd59a71495b20e"
+      url "https://github.com/abdul-hamid-achik/teak/releases/download/v0.10.16/teak_0.10.16_Darwin_arm64.tar.gz"
+      sha256 "d6ba62d7d0ec5ade93474fb94dd64461a8756ac503061cdf9e7939295fef21df"
 
       define_method(:install) do
         bin.install "teak"
@@ -29,15 +29,15 @@ class Teak < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/teak/releases/download/v0.10.15/teak_0.10.15_Linux_x86_64.tar.gz"
-      sha256 "5503647d211098ebcccc17508701e2d785668ba80cb50bd3f254c3d428765b0a"
+      url "https://github.com/abdul-hamid-achik/teak/releases/download/v0.10.16/teak_0.10.16_Linux_x86_64.tar.gz"
+      sha256 "d293b77856014f32b1cc4818b33dcf194d8f311977e6a78ff61d7d04bbb3dd27"
       define_method(:install) do
         bin.install "teak"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abdul-hamid-achik/teak/releases/download/v0.10.15/teak_0.10.15_Linux_arm64.tar.gz"
-      sha256 "1e2be3ac2c2986d7b0ab9fe5a64762361506967b1efd16f9c869d9a6c451c3d3"
+      url "https://github.com/abdul-hamid-achik/teak/releases/download/v0.10.16/teak_0.10.16_Linux_arm64.tar.gz"
+      sha256 "e9e2aa9ec81fcc2d6e72d1142ee691943820c852055f2992169b2842f6f90098"
       define_method(:install) do
         bin.install "teak"
       end
