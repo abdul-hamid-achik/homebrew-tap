@@ -8,10 +8,14 @@
 class Cairntrace < Formula
   desc "Behavioral browser-spec layer for agent-in-session use"
   homepage "https://github.com/abdul-hamid-achik/cairntrace"
-  url "https://github.com/abdul-hamid-achik/cairntrace/archive/refs/tags/v2.9.0.tar.gz"
-  version "2.9.0"
-  sha256 "d7908adc05813f96b42e4854e983b078b77d271cd57267f6bbfb8f67e1cd0f25"
+  url "https://github.com/abdul-hamid-achik/cairntrace/archive/refs/tags/v2.10.0.tar.gz"
+  sha256 "170cc66fdd47dca51cbd456a7ee90137fef33f1e4e2b98f2dbb2d6297ce7b725"
   license "MIT"
+
+  livecheck do
+    url :homepage
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 
   depends_on "bun"
 
@@ -26,7 +30,12 @@ class Cairntrace < Formula
 
   def caveats
     <<~EOS
-      cairntrace runs browser specs via Playwright. Install Chromium once:
+      cairntrace is a Bun shebang CLI (this formula depends on bun).
+
+      Default backend:
+        brew install vercel-labs/agent-browser/agent-browser
+
+      Optional Playwright backend:
         bunx playwright install chromium
       (or `bunx playwright install --with-deps chromium` on Linux).
     EOS
