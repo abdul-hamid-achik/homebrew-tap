@@ -32,6 +32,10 @@ cask "local-agent" do
     skip "Auto-generated on release."
   end
 
+  # local-agent is being rewritten in Bun/TypeScript and has no standalone
+  # release yet; this is the last Go release (0.30.0).
+  deprecate! date: "2026-10-04", because: "is being rewritten in Bun/TypeScript with no standalone release yet"
+
   binary "local-agent"
 
   postflight_steps do

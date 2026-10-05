@@ -8,6 +8,10 @@ class Gpeek < Formula
   version "0.15.0"
   license "MIT"
 
+  # gpeek is now a native Swift macOS app with no Homebrew distribution; this
+  # is the last Go TUI release (0.15.0).
+  deprecate! date: "2026-10-04", because: "was rewritten as a Swift macOS app not shipped via this tap"
+
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/abdul-hamid-achik/gpeek/releases/download/v0.15.0/gpeek_0.15.0_darwin_amd64.tar.gz"

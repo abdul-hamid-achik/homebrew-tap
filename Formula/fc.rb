@@ -8,6 +8,9 @@ class Fc < Formula
   version "0.12.0"
   license "MIT"
 
+  # Superseded by the `fcheap` cask (new CLI name and release pipeline).
+  deprecate! date: "2026-10-04", because: "was replaced by the fcheap CLI", replacement_cask: "fcheap"
+
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/abdul-hamid-achik/file.cheap/releases/download/v0.12.0/fc_0.12.0_darwin_amd64.tar.gz"
