@@ -24,7 +24,7 @@ cask "fcheap" do
   end
 
   name "fcheap"
-  desc "The local artifact vault for coding agents"
+  desc "Local artifact vault for coding agents"
   homepage "https://github.com/abdul-hamid-achik/file.cheap"
 
   livecheck do

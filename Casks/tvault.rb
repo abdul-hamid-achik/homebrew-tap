@@ -3,24 +3,23 @@ cask "tvault" do
   version "0.25.0"
 
   on_macos do
-    on_intel do
-      sha256 "d9424e6262bab5800a0634690a97255de5d494304aa05ae6ce98cdf5924add33"
-      url "https://github.com/abdul-hamid-achik/tinyvault/releases/download/v#{version}/tvault_#{version}_darwin_amd64.tar.gz"
-    end
     on_arm do
       sha256 "c46b7ad88e7be8feee2f3e881ce37cae70251360a1ce57f950518f5cf2ee2eb6"
       url "https://github.com/abdul-hamid-achik/tinyvault/releases/download/v#{version}/tvault_#{version}_darwin_arm64.tar.gz"
     end
-  end
-
-  on_linux do
     on_intel do
-      sha256 "3d787ddcd7cd67da894db69fc12125a70f2e78fa470f62866762ae9eed864129"
-      url "https://github.com/abdul-hamid-achik/tinyvault/releases/download/v#{version}/tvault_#{version}_linux_amd64.tar.gz"
+      sha256 "d9424e6262bab5800a0634690a97255de5d494304aa05ae6ce98cdf5924add33"
+      url "https://github.com/abdul-hamid-achik/tinyvault/releases/download/v#{version}/tvault_#{version}_darwin_amd64.tar.gz"
     end
+  end
+  on_linux do
     on_arm do
       sha256 "86aa84290a666ee2045be53c29d9c48ce94f3e2638fe259962dd4c624b66ef91"
       url "https://github.com/abdul-hamid-achik/tinyvault/releases/download/v#{version}/tvault_#{version}_linux_arm64.tar.gz"
+    end
+    on_intel do
+      sha256 "3d787ddcd7cd67da894db69fc12125a70f2e78fa470f62866762ae9eed864129"
+      url "https://github.com/abdul-hamid-achik/tinyvault/releases/download/v#{version}/tvault_#{version}_linux_amd64.tar.gz"
     end
   end
 
@@ -41,5 +40,4 @@ cask "tvault" do
   end
 
   # No zap stanza required
-
 end

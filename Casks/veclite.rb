@@ -3,24 +3,23 @@ cask "veclite" do
   version "0.24.1"
 
   on_macos do
-    on_intel do
-      sha256 "6499bfd5b7b72915d44bbfd7603a5a6d57e17d9c3dc2ad5c505e0419de732451"
-      url "https://github.com/abdul-hamid-achik/veclite/releases/download/v#{version}/veclite_#{version}_darwin_amd64.tar.gz"
-    end
     on_arm do
       sha256 "9bc6433f429c39193a9f730d1742e36a7043a88d5a301890496885cf213dfea8"
       url "https://github.com/abdul-hamid-achik/veclite/releases/download/v#{version}/veclite_#{version}_darwin_arm64.tar.gz"
     end
-  end
-
-  on_linux do
     on_intel do
-      sha256 "556ef394185310c86d228071f9ad2de1a4cb768b847fb2ed0fb081a0ee90a18c"
-      url "https://github.com/abdul-hamid-achik/veclite/releases/download/v#{version}/veclite_#{version}_linux_amd64.tar.gz"
+      sha256 "6499bfd5b7b72915d44bbfd7603a5a6d57e17d9c3dc2ad5c505e0419de732451"
+      url "https://github.com/abdul-hamid-achik/veclite/releases/download/v#{version}/veclite_#{version}_darwin_amd64.tar.gz"
     end
+  end
+  on_linux do
     on_arm do
       sha256 "899ed119e80ea43a9f4192887e2b9b8ccfc6b986dec94a13f388b72e710dcc2f"
       url "https://github.com/abdul-hamid-achik/veclite/releases/download/v#{version}/veclite_#{version}_linux_arm64.tar.gz"
+    end
+    on_intel do
+      sha256 "556ef394185310c86d228071f9ad2de1a4cb768b847fb2ed0fb081a0ee90a18c"
+      url "https://github.com/abdul-hamid-achik/veclite/releases/download/v#{version}/veclite_#{version}_linux_amd64.tar.gz"
     end
   end
 

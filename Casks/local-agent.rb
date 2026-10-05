@@ -3,24 +3,23 @@ cask "local-agent" do
   version "0.30.0"
 
   on_macos do
-    on_intel do
-      sha256 "1fd56f512b5df4961dfcbdc745dc9c05d5f8caae9e9a597662a7442ed578cec0"
-      url "https://github.com/abdul-hamid-achik/local-agent/releases/download/v#{version}/local-agent_#{version}_darwin_amd64.tar.gz"
-    end
     on_arm do
       sha256 "26a317a38778e3905a2effb7ab72a062bcbb369efd41387f8f92fdd1a7bc3be4"
       url "https://github.com/abdul-hamid-achik/local-agent/releases/download/v#{version}/local-agent_#{version}_darwin_arm64.tar.gz"
     end
-  end
-
-  on_linux do
     on_intel do
-      sha256 "59274e42e2dfdb89c7bb25f1218cad2df7569ddf215c6abfd8d92e244427621f"
-      url "https://github.com/abdul-hamid-achik/local-agent/releases/download/v#{version}/local-agent_#{version}_linux_amd64.tar.gz"
+      sha256 "1fd56f512b5df4961dfcbdc745dc9c05d5f8caae9e9a597662a7442ed578cec0"
+      url "https://github.com/abdul-hamid-achik/local-agent/releases/download/v#{version}/local-agent_#{version}_darwin_amd64.tar.gz"
     end
+  end
+  on_linux do
     on_arm do
       sha256 "12d3948dc402e509a84352539fd79a4397ef3c01a594dad2c5c2c59b007e958a"
       url "https://github.com/abdul-hamid-achik/local-agent/releases/download/v#{version}/local-agent_#{version}_linux_arm64.tar.gz"
+    end
+    on_intel do
+      sha256 "59274e42e2dfdb89c7bb25f1218cad2df7569ddf215c6abfd8d92e244427621f"
+      url "https://github.com/abdul-hamid-achik/local-agent/releases/download/v#{version}/local-agent_#{version}_linux_amd64.tar.gz"
     end
   end
 
@@ -45,5 +44,4 @@ cask "local-agent" do
   end
 
   # No zap stanza required
-
 end
