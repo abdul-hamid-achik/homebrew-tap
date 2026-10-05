@@ -1,0 +1,66 @@
+name: normalize-casks
+
+# TEMPORARY. GoReleaser (<= v2.18) renders `homebrew_casks.hooks.post.install`
+# as a legacy `postflight do ... end` block, which Homebrew 7 deprecates for
+# third-party taps (disabled 2027-12-11). Every release push from a feeding
+# repo lands here; this job rewrites that block into declarative
+# `postflight_steps` and commits it back.
+#
+# Delete this workflow, .github/scripts/normalize_casks.py and its test once
+# every feeding repo emits `install_steps` natively (GoReleaser v2.19):
+# https://github.com/goreleaser/goreleaser/pull/6873
+#
+# Commits made with GITHUB_TOKEN do not trigger further workflow runs, so the
+# rewrite cannot loop. The script is idempotent: no change, no commit. A
+# postflight block it does not recognise fails the job and changes nothing.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "Casks/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: normalize-casks
+  cancel-in-progress: false
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Test the normalizer
+        run: python3 .github/scripts/test_normalize_casks.py
+
+      - name: Rewrite legacy postflight blocks
+        run: python3 .github/scripts/normalize_casks.py
+
+      - name: Commit and push if changed
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- Casks; then
+            echo "Casks already normalized; nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Casks
+          git commit -m "chore(casks): normalize legacy postflight to postflight_steps"
+          # A release may have landed while this job ran; rebase onto it, then
+          # re-run the (idempotent) rewrite so a racing release cannot slip a
+          # legacy block through.
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          python3 .github/scripts/normalize_casks.py
+          if ! git diff --quiet -- Casks; then
+            git add Casks
+            git commit -m "chore(casks): normalize legacy postflight to postflight_steps"
+          fi
+          git push origin "HEAD:${GITHUB_REF_NAME}"

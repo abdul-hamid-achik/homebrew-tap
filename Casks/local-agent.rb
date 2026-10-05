@@ -34,8 +34,10 @@ cask "local-agent" do
 
   binary "local-agent"
 
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/local-agent"] if OS.mac?
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/local-agent"]
+    end
   end
 
   # No zap stanza required
