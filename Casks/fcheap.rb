@@ -24,7 +24,7 @@ cask "fcheap" do
   end
 
   name "fcheap"
-  desc "The local artifact vault for coding agents"
+  desc "Local artifact vault for coding agents"
   homepage "https://github.com/abdul-hamid-achik/file.cheap"
 
   livecheck do
@@ -33,9 +33,9 @@ cask "fcheap" do
 
   binary "fcheap"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/fcheap"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/fcheap"]
     end
   end
 

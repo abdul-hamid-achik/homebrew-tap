@@ -3,24 +3,23 @@ cask "tuimark" do
   version "0.3.1"
 
   on_macos do
-    on_intel do
-      sha256 "29b625de15ad8877d746d6d9732e134824f3e1ec04466c37b62e1cbf1b4c1a43"
-      url "https://github.com/abdul-hamid-achik/tuimark/releases/download/v#{version}/tuimark_#{version}_Darwin_x86_64.tar.gz"
-    end
     on_arm do
       sha256 "bd9a7c68cc0d4cce8558f24bde0f844bcce24e362545f56622cd628375f5a250"
       url "https://github.com/abdul-hamid-achik/tuimark/releases/download/v#{version}/tuimark_#{version}_Darwin_arm64.tar.gz"
     end
-  end
-
-  on_linux do
     on_intel do
-      sha256 "76766b0ea010ad6b4b4c54d352c9faf22b329b31b0730bedbc8a0638c3491ecc"
-      url "https://github.com/abdul-hamid-achik/tuimark/releases/download/v#{version}/tuimark_#{version}_Linux_x86_64.tar.gz"
+      sha256 "29b625de15ad8877d746d6d9732e134824f3e1ec04466c37b62e1cbf1b4c1a43"
+      url "https://github.com/abdul-hamid-achik/tuimark/releases/download/v#{version}/tuimark_#{version}_Darwin_x86_64.tar.gz"
     end
+  end
+  on_linux do
     on_arm do
       sha256 "69493e66c172a81ea30130dca7be81f51fa4a972cda72f391aac1f92338b1642"
       url "https://github.com/abdul-hamid-achik/tuimark/releases/download/v#{version}/tuimark_#{version}_Linux_arm64.tar.gz"
+    end
+    on_intel do
+      sha256 "76766b0ea010ad6b4b4c54d352c9faf22b329b31b0730bedbc8a0638c3491ecc"
+      url "https://github.com/abdul-hamid-achik/tuimark/releases/download/v#{version}/tuimark_#{version}_Linux_x86_64.tar.gz"
     end
   end
 
@@ -34,12 +33,11 @@ cask "tuimark" do
 
   binary "tuimark"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/tuimark"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/tuimark"]
     end
   end
 
   # No zap stanza required
-
 end

@@ -3,24 +3,23 @@ cask "bob" do
   version "0.12.0"
 
   on_macos do
-    on_intel do
-      sha256 "7de59301d8f1e07b38241639d7c48a1c8a67c9cbcd0813bcfad9467e69bf249b"
-      url "https://github.com/abdul-hamid-achik/bob/releases/download/v#{version}/bob_#{version}_darwin_amd64.tar.gz"
-    end
     on_arm do
       sha256 "1d71d6237a92ae0128cce8841d8fc1707ebe3f7c3b4d7a25607b7a4a8238e567"
       url "https://github.com/abdul-hamid-achik/bob/releases/download/v#{version}/bob_#{version}_darwin_arm64.tar.gz"
     end
-  end
-
-  on_linux do
     on_intel do
-      sha256 "b053e99f49c3bce0ac31c5239bc48e22b3dbc8f81b194fccbb9efd9d31c3e2c5"
-      url "https://github.com/abdul-hamid-achik/bob/releases/download/v#{version}/bob_#{version}_linux_amd64.tar.gz"
+      sha256 "7de59301d8f1e07b38241639d7c48a1c8a67c9cbcd0813bcfad9467e69bf249b"
+      url "https://github.com/abdul-hamid-achik/bob/releases/download/v#{version}/bob_#{version}_darwin_amd64.tar.gz"
     end
+  end
+  on_linux do
     on_arm do
       sha256 "d99dfec482e78b6d31470a7a4b7ab9739cb49acca3249297d7706f7abfef81ea"
       url "https://github.com/abdul-hamid-achik/bob/releases/download/v#{version}/bob_#{version}_linux_arm64.tar.gz"
+    end
+    on_intel do
+      sha256 "b053e99f49c3bce0ac31c5239bc48e22b3dbc8f81b194fccbb9efd9d31c3e2c5"
+      url "https://github.com/abdul-hamid-achik/bob/releases/download/v#{version}/bob_#{version}_linux_amd64.tar.gz"
     end
   end
 
@@ -34,9 +33,9 @@ cask "bob" do
 
   binary "bob"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/bob"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/bob"]
     end
   end
 

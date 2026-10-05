@@ -3,24 +3,23 @@ cask "monitor" do
   version "2.2.0"
 
   on_macos do
-    on_intel do
-      sha256 "9e193528f1bc2b8794b77b6f898dc7ac74ae737d87d6ce4d4863a3409213c496"
-      url "https://github.com/abdul-hamid-achik/monitor/releases/download/v#{version}/monitor_#{version}_Darwin_x86_64.tar.gz"
-    end
     on_arm do
       sha256 "20835ade91b1bcc2fdf35a7f38f5ec62837a771f04f8124bba21199042b0ffd9"
       url "https://github.com/abdul-hamid-achik/monitor/releases/download/v#{version}/monitor_#{version}_Darwin_arm64.tar.gz"
     end
-  end
-
-  on_linux do
     on_intel do
-      sha256 "1dc2311b80c1e7d0c34c038819dde1c19a87d9c64b18351a17667c3a542d4131"
-      url "https://github.com/abdul-hamid-achik/monitor/releases/download/v#{version}/monitor_#{version}_Linux_x86_64.tar.gz"
+      sha256 "9e193528f1bc2b8794b77b6f898dc7ac74ae737d87d6ce4d4863a3409213c496"
+      url "https://github.com/abdul-hamid-achik/monitor/releases/download/v#{version}/monitor_#{version}_Darwin_x86_64.tar.gz"
     end
+  end
+  on_linux do
     on_arm do
       sha256 "2d9cd0d209cec0472c4406e4e829966a511d1a6fa6f30bbe333babba21f9c6f8"
       url "https://github.com/abdul-hamid-achik/monitor/releases/download/v#{version}/monitor_#{version}_Linux_arm64.tar.gz"
+    end
+    on_intel do
+      sha256 "1dc2311b80c1e7d0c34c038819dde1c19a87d9c64b18351a17667c3a542d4131"
+      url "https://github.com/abdul-hamid-achik/monitor/releases/download/v#{version}/monitor_#{version}_Linux_x86_64.tar.gz"
     end
   end
 
@@ -34,9 +33,9 @@ cask "monitor" do
 
   binary "monitor"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/monitor"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/monitor"]
     end
   end
 

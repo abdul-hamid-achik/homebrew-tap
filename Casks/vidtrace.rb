@@ -3,24 +3,23 @@ cask "vidtrace" do
   version "0.19.0"
 
   on_macos do
-    on_intel do
-      sha256 "19b25c87323941443ac21192a7d2777ca97221314beb444b35d4d1e4d1dc107c"
-      url "https://github.com/abdul-hamid-achik/vidtrace/releases/download/v#{version}/vidtrace_#{version}_darwin_amd64.tar.gz"
-    end
     on_arm do
       sha256 "e93e5b21679fbf91714b46ef2e2de3726daa8ed8ba63761b02271a458ae0cfeb"
       url "https://github.com/abdul-hamid-achik/vidtrace/releases/download/v#{version}/vidtrace_#{version}_darwin_arm64.tar.gz"
     end
-  end
-
-  on_linux do
     on_intel do
-      sha256 "e3a132884d16a25d0e1872dafe04d501711ec076c0aa30d3d84033d8aa8ce40b"
-      url "https://github.com/abdul-hamid-achik/vidtrace/releases/download/v#{version}/vidtrace_#{version}_linux_amd64.tar.gz"
+      sha256 "19b25c87323941443ac21192a7d2777ca97221314beb444b35d4d1e4d1dc107c"
+      url "https://github.com/abdul-hamid-achik/vidtrace/releases/download/v#{version}/vidtrace_#{version}_darwin_amd64.tar.gz"
     end
+  end
+  on_linux do
     on_arm do
       sha256 "5f4b310b9da8be8648fab8f0d4c01772f91220f5065b383beed83bb8b5a9b29d"
       url "https://github.com/abdul-hamid-achik/vidtrace/releases/download/v#{version}/vidtrace_#{version}_linux_arm64.tar.gz"
+    end
+    on_intel do
+      sha256 "e3a132884d16a25d0e1872dafe04d501711ec076c0aa30d3d84033d8aa8ce40b"
+      url "https://github.com/abdul-hamid-achik/vidtrace/releases/download/v#{version}/vidtrace_#{version}_linux_amd64.tar.gz"
     end
   end
 
@@ -34,9 +33,9 @@ cask "vidtrace" do
 
   binary "vidtrace"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/vidtrace"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/vidtrace"]
     end
   end
 

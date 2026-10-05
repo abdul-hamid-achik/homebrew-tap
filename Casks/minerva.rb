@@ -3,30 +3,29 @@ cask "minerva" do
   version "1.1.0"
 
   on_macos do
-    on_intel do
-      sha256 "671c32a4700f987d9abba7230c0aaa72f9654ca3996f6492e504aec3e9ae2e37"
-      url "https://github.com/abdul-hamid-achik/minerva/releases/download/v#{version}/minerva_#{version}_darwin_amd64.tar.gz"
-    end
     on_arm do
       sha256 "79796569b27ea0624cf525032b161793f40182aeaf9794f09f5470e52c2b95d5"
       url "https://github.com/abdul-hamid-achik/minerva/releases/download/v#{version}/minerva_#{version}_darwin_arm64.tar.gz"
     end
-  end
-
-  on_linux do
     on_intel do
-      sha256 "d12fc142dfa804ae9f63a96f1ecf960d86bf61029a512c9a3fbcdc54f010a37e"
-      url "https://github.com/abdul-hamid-achik/minerva/releases/download/v#{version}/minerva_#{version}_linux_amd64.tar.gz"
+      sha256 "671c32a4700f987d9abba7230c0aaa72f9654ca3996f6492e504aec3e9ae2e37"
+      url "https://github.com/abdul-hamid-achik/minerva/releases/download/v#{version}/minerva_#{version}_darwin_amd64.tar.gz"
     end
+  end
+  on_linux do
     on_arm do
       sha256 "0c7033127a5d79386c038e0197c46ca00c3803d825707ae37fc8196fdbc0842a"
       url "https://github.com/abdul-hamid-achik/minerva/releases/download/v#{version}/minerva_#{version}_linux_arm64.tar.gz"
+    end
+    on_intel do
+      sha256 "d12fc142dfa804ae9f63a96f1ecf960d86bf61029a512c9a3fbcdc54f010a37e"
+      url "https://github.com/abdul-hamid-achik/minerva/releases/download/v#{version}/minerva_#{version}_linux_amd64.tar.gz"
     end
   end
 
   name "minerva"
   desc "Skill intelligence for agent harnesses — propose SKILL.md from session traces and sync libraries"
-  homepage "https://minervacli.dev"
+  homepage "https://minervacli.dev/"
 
   livecheck do
     skip "Auto-generated on release."
@@ -34,9 +33,9 @@ cask "minerva" do
 
   binary "minerva"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/minerva"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/minerva"]
     end
   end
 

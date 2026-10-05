@@ -3,24 +3,23 @@ cask "codemap" do
   version "0.69.1"
 
   on_macos do
-    on_intel do
-      sha256 "78ace3ee3fb56e0ea310e5be37bfe668bd8d6fe443097af7f9930d24aadd4641"
-      url "https://github.com/abdul-hamid-achik/codemap/releases/download/v#{version}/codemap_#{version}_darwin_amd64.tar.gz"
-    end
     on_arm do
       sha256 "6104f3ead236e5e0bc09d06d6cc8dddbd3ceb9967e6f974dc8bbe168b91ea885"
       url "https://github.com/abdul-hamid-achik/codemap/releases/download/v#{version}/codemap_#{version}_darwin_arm64.tar.gz"
     end
-  end
-
-  on_linux do
     on_intel do
-      sha256 "8325589d1dd12fc655a75dfeffde0047b95f661dd92eb1e82998c50f5fee79ac"
-      url "https://github.com/abdul-hamid-achik/codemap/releases/download/v#{version}/codemap_#{version}_linux_amd64.tar.gz"
+      sha256 "78ace3ee3fb56e0ea310e5be37bfe668bd8d6fe443097af7f9930d24aadd4641"
+      url "https://github.com/abdul-hamid-achik/codemap/releases/download/v#{version}/codemap_#{version}_darwin_amd64.tar.gz"
     end
+  end
+  on_linux do
     on_arm do
       sha256 "9ab27c7be25b97638e2c6a0e89028700318647c9e7643245c04fe425088348de"
       url "https://github.com/abdul-hamid-achik/codemap/releases/download/v#{version}/codemap_#{version}_linux_arm64.tar.gz"
+    end
+    on_intel do
+      sha256 "8325589d1dd12fc655a75dfeffde0047b95f661dd92eb1e82998c50f5fee79ac"
+      url "https://github.com/abdul-hamid-achik/codemap/releases/download/v#{version}/codemap_#{version}_linux_amd64.tar.gz"
     end
   end
 
@@ -34,9 +33,9 @@ cask "codemap" do
 
   binary "codemap"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/codemap"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/codemap"]
     end
   end
 
