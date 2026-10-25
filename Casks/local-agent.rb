@@ -1,24 +1,24 @@
 # Written by local-agent's release workflow (scripts/release-cask.ts).
 cask "local-agent" do
-  version "0.52.2"
+  version "0.53.0"
 
   on_macos do
     on_arm do
-      sha256 "c3e044aba467ce0acf7872040614123fb5dac947b6123fb174381342f7c15a49"
+      sha256 "b8c0bcd66bf741a294cc119c589b47eed18d94dc43a8304cf867cac5b6cd0a34"
       url "https://github.com/abdul-hamid-achik/local-agent/releases/download/v#{version}/local-agent_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "6b552848f23594339575329df88a68c9c297ede2ea92f5ae407cfa42fe82d196"
+      sha256 "b0f1c9e4ef80339413ef19240e90f42376bac0b93651e80bce8af746dcea775b"
       url "https://github.com/abdul-hamid-achik/local-agent/releases/download/v#{version}/local-agent_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "2c8c66279b47d2840b2e194f23b3301ed8898f1042b1f31129e485f54daaa3b9"
+      sha256 "7de1e40db53f795443234c8819972b708ceba879cccebf36e3c009656b38d28f"
       url "https://github.com/abdul-hamid-achik/local-agent/releases/download/v#{version}/local-agent_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "9c71698a3c643732da57ba2f2bbfdbddf3d77442bb232f6970e86f93f545289d"
+      sha256 "dd6b775546ee2733cda7b22e7583093d97b79d77bada543bee3ea27027edc1bd"
       url "https://github.com/abdul-hamid-achik/local-agent/releases/download/v#{version}/local-agent_#{version}_linux_amd64.tar.gz"
     end
   end
